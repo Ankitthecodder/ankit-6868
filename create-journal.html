@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Journal</title>
+</head>
+<body>
+    <h1>Create Journal</h1>
+
+    <form action="/api/v1/journals" method="post">
+        
+        <!-- This is the text type input form element -->
+        <!-- This is the label form element -->
+        <label for="journal-title" title="Enter the title of the journal">Journal Title</label><br>
+        <input id="journal-title" type="text" name="journal-title" placeholder="Eg: A Sunny Day" minlength="3" maxlength="22">
+
+        <br>
+
+        <!-- This is the dropdown form element -->
+        <label for="journal-category" title="Select the desired journal Category">Journal Category</label><br> 
+        <select id="journal-category" name="journal-category" required>
+            <option value="idea">Idea</option>
+            <option value="note">Note</option>
+            <option value="goal">Goal</option>
+            <option value="habit">Habit</option>
+            <option value="memory">Memory</option>
+            <option value="mood">Mood</option>
+            <option value="event">Event</option>
+            <option value="task">Task</option>
+        </select>
+
+        <br>
+
+        <!-- This is the textarea form element -->
+        <label for="journal-entry" title="Enter Your Journal">Journal Entry</label><br>
+        <textarea id="journal-entry" name="journal-entry" rows="5" cols="30" required minlength="5" maxlength="70" placeholder="Eg: Today my day was... "></textarea>
+
+        <br>
+
+        <!-- This is the checkbox input type form element -->
+        <input id="journal-correction" name="journal-correction" type="checkbox">
+        <label for="journal-correction">I want the journal to be autocorrected and customized using AI</label>
+
+        <br>
+
+        What do you want your journal to be? (For specification)
+
+        <br>
+
+        <!-- This is the radio button input type form element -->
+        <input type="radio" id="journal-creative" name="journal-type" value="creative" required>
+        <label for="journal-creative">Creative</label>
+        
+        <br>  
+
+
+        <input type="radio" id="journal-analytical" name="journal-type" value="analytical" required>
+        <label for="journal-analytical">Analytical</label>
+        
+        <br>
+
+        <input type="radio" id="journal-reflective" name="journal-type" value="reflective" required>
+        <label for="journal-reflective">Reflective</label>
+
+        <br>
+
+        <p></p>
+
+        <!-- This is the submit button -->
+        <button type="submit">Submit</button>
+
+        <br>
+
+        <!-- This is the reset button -->
+        <button type="reset">Reset</button>
+
+    </form>
+    
+</body>
+</html>
